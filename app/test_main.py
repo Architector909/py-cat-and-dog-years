@@ -13,6 +13,11 @@ from app.main import get_human_age
         (27, 27, [2, 2]),
         (28, 28, [3, 2]),
         (100, 100, [21, 17]),
+
+        # boundary checks
+        (16, 16, [1, 1]),
+        (24, 25, [2, 2]),
+        (28, 29, [3, 2]),
     ],
 )
 def test_get_human_age(cat: int, dog: int, expected: list) -> None:

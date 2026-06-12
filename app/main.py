@@ -2,6 +2,7 @@ from typing import List
 
 
 def get_human_age(cat_age: int, dog_age: int) -> List[int]:
+
     def cat_to_human(age: int) -> int:
         if age < 15:
             return 0
@@ -9,7 +10,7 @@ def get_human_age(cat_age: int, dog_age: int) -> List[int]:
             return 1
         if age < 28:
             return 2
-        return 2 + (age - 28) // 4
+        return 2 + (age - 24) // 4
 
     def dog_to_human(age: int) -> int:
         if age < 15:
@@ -18,8 +19,6 @@ def get_human_age(cat_age: int, dog_age: int) -> List[int]:
             return 1
         if age < 28:
             return 2
-        if age < 29:
-            return 3
-        return 3 + (age - 29) // 5
+        return 2 + (age - 24) // 5
 
     return [cat_to_human(cat_age), dog_to_human(dog_age)]
